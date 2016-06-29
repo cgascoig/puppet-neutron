@@ -107,6 +107,9 @@ define neutron::plugins::ml2::type_driver (
   elsif ($name == 'nexus_vxlan') {
     # Nexus_vxlan type driver has its own class separate from this one
   }
+  elsif ($name == 'opflex') {
+    warning('using opflex type driver - no validation performed')
+  }
   else {
     # detect an invalid type_drivers value
     fail('type_driver unknown.')
