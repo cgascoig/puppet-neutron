@@ -105,6 +105,9 @@ class neutron::agents::dhcp (
     /^midonet.*/: {
       ensure_packages($::neutron::params::midonet_server_package)
     }
+    /\.ApicDnsmasq/: {
+    
+    }
     default: {
       fail("Unsupported dhcp_driver ${dhcp_driver}")
     }
